@@ -31,12 +31,17 @@ def main():
 
     CL2CAT = col_head[n - 1]
     #
+
     for a, b in enumerate(col_head, 1):
         print('{} {}'.format(a, b))
+    try:
+        n = int(input("Enter a number for your size variable (This changes the size of the dots): "))
+        CLsize = col_head[n - 1]
+    except:
+        CLsize = None
+        pass
 
-    n = int(input("Enter a number for your size variable (This changes the size of the dots): "))
 
-    CLsize = col_head[n - 1]
     #
     for a, b in enumerate(col_head, 1):
         print('{} {}'.format(a, b))
@@ -65,9 +70,12 @@ def main():
         size_max=30,
 
     )
+
     trendline = fig.data[1]
     fig.add_trace(trendline)
+
     fig.show()
+
     fig = px.scatter(
         data_frame=df,
         x=CL1CAT,

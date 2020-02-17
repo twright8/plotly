@@ -81,7 +81,7 @@ except:
 
 #
 
-df = df.dropna(axis=0, how='any', thresh=None, subset=[CL1CAT, CL2CAT, CLsize], inplace=False)
+df = df.dropna(axis=0, how='any', thresh=None, subset=[CL1CAT, CL2CAT], inplace=False)
 CL_Name = "Country name"
 import statsmodels.formula.api as sm
 
